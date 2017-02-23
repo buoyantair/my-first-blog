@@ -1,0 +1,36 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello kitty blog</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/site-header.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/jumbotron.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}"/>
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700|Raleway:400,700,900|Ubuntu:300,400,700" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="header">
+      <div class="brand">Hello Kitty Blog</div>
+      <ul class="navigation">
+        <li><a href="http://buoyantair.pythonanywhere.com/">Home</a></li>
+        <li><a href="#">About</a></li>
+
+      </ul>
+    </div>
+
+    <!--
+    <div class="jumbotron">
+      <h1>The lost earth</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  -->
+
+    <div class="blog-content">
+      {% block content %}
+      {% endblock %}
+    </div>
+
+  </body>
+</html>
