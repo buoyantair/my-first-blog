@@ -1,0 +1,65 @@
+.jumbotron{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+
+  background: url('../static/img/bg2.jpg') no-repeat;
+  background-position: 25% 20%;
+  background-size: 100%;
+  min-height: 100px;
+
+}
+
+.jumbotron h1, .jumbotron p{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.jumbotron p{
+  margin-top: 1em;
+}
+
+
+.blog-content{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+  min-height: 1000px;
+  background: #F2F2F2;
+}
+
+.blog-post{
+  display: flex;
+  flex-flow: column wrap;
+  min-height: 300px;
+  max-height: 300px;
+  background: #FFF;
+  border-radius: 5px;
+  width: 1050px;
+  margin:1em;
+  justify-content: flex-start;
+
+  box-shadow: 0 10 100 1 rgba(0,0,0,0.4);
+}
+
+.post-heading{
+  margin: 1em 0 0 1em;
+  font-size: 30px;
+  font-family: "Oxygen", sans-serif;
+}
+
+.post-metadata{
+  margin: 2em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  font-family: "Oxygen", sans-serif;
+}
+
+.post-body{
+  width: 80%;
+  font-size: 18px;
+  font-family: 'Oxygen', sans-serif;
+  margin: 2em;
+}
