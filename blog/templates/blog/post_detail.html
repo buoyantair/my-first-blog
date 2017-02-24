@@ -27,8 +27,24 @@
      {% endif %}
     </div>
     <div class="post-body">
-      {{post.text}}
+      {{post.text | linebreaks}}
     </div>
-
+      <hr>
+    <div class="comments">
+      {% for comment in post.comments.all %}
+        {% if user.is_authenticated or comment.approved_comment %}
+        <a class="btn btn-default add-comment" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
+        <div class="comment">
+            <p class="metadata">{{ comment.author }} at {{ comment.created_date }} said: </p>  <hr>
+            {% if not comment.approved_comment %}
+              <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+              <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
+            {% endif %}
+            <p>{{ comment.text | linebreaks }} </p>
+            {% empty %}
+              <p>No comments here yet :(</p>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 {% endblock %}

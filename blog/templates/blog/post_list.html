@@ -10,8 +10,9 @@
           Published: {{post.published_date}}
         </div>
         <div class="post-body">
-          {{post.text}}
+          {{post.text | linebreasbr}}
         </div>
+        <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.comments.count }}</a>
       </div>
       {% endfor %}
-{% endblock %}
+{% endblock content%}
