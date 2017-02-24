@@ -20,6 +20,7 @@
 }
 
 
+
 .blog-content{
   display: flex;
   flex-flow: row wrap;
@@ -37,7 +38,6 @@
   display: flex;
   flex-flow: column wrap;
   min-height: 300px;
-  max-height: 300px;
   background: #FFF;
   border-radius: 5px;
   width: 1050px;
@@ -66,8 +66,16 @@
 }
 
 .post-body{
+  min-height: 300px;
   width: 80%;
   font-size: 18px;
   font-family: 'Oxygen', sans-serif;
   margin: 2em;
+
+}
+
+.post-options{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
 }
