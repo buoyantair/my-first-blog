@@ -17,7 +17,7 @@ body,html{
 
   min-height: 10px;
   max-height: 60px;
-  background: #58c446;
+  background: #FF6B6C;
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   color: #FFF;
@@ -54,13 +54,13 @@ body,html{
   min-width: 100px;
   text-decoration: none;
   color: #FFF;
-  background: #51B541;
+  background: #FF6B6C;
   border-radius: 30px;
   margin: 0 .2em;
-  border: 2px solid #51B541;
+  border: 2px solid #E86263;
 }
 
 .navigation a:hover{
-  background: #58c446;
-  border: 2px solid #51B541;
+  background: #FF6B6C;
+  border: 2px solid #E86263;
 }
