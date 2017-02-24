@@ -6,11 +6,6 @@
     <div class="post-options">
       <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
       <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
-      {% if post.published_date %}
-        {{post.published_date}}
-       {% else %}
-          <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
-       {% endif %}
     </div>
     {% endif %}
     <div class="post-heading">
@@ -23,6 +18,8 @@
       Author : {{post.author}}
       {% if post.published_date %}
      Published: {{post.published_date}}
+     {% else %}
+        <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
      {% endif %}
     </div>
     <div class="post-body">
