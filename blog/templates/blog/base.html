@@ -4,6 +4,7 @@
 <html>
   <head>
     <title>Hello kitty blog</title>
+    <link rel='stylesheet' type='text/css' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'css/site-header.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'css/jumbotron.css' %}"/>
@@ -16,7 +17,9 @@
       <ul class="navigation">
         <li><a href="http://buoyantair.pythonanywhere.com/">Home</a></li>
         <li><a href="#">About</a></li>
-
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a></li>
+        {% endif %}
       </ul>
     </div>
 

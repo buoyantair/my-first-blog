@@ -29,6 +29,10 @@
   background: #F2F2F2;
 }
 
+.con{
+  font-family: "Oxygen", sans-serif;
+}
+
 .blog-post{
   display: flex;
   flex-flow: column wrap;
