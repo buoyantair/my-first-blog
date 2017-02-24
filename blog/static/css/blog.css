@@ -71,11 +71,11 @@
   font-size: 18px;
   font-family: 'Oxygen', sans-serif;
   margin: 2em;
-
 }
 
 .post-options{
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
+  color: inherit;
 }
