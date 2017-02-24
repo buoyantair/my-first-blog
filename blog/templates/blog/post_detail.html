@@ -27,7 +27,7 @@
      {% endif %}
     </div>
     <div class="post-body">
-      {{post.text | linebreaks}}
+      {{ post.text | linebreaks }}
     </div>
       <hr>
     <div class="comments">
@@ -41,8 +41,9 @@
               <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
             {% endif %}
             <p>{{ comment.text | linebreaks }} </p>
-            {% empty %}
+            {% else %}
               <p>No comments here yet :(</p>
+            {% endif %}
         </div>
       {% endfor %}
     </div>
