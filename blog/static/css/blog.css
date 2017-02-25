@@ -44,6 +44,7 @@
   margin:1em;
 
   min-height: 300px;
+  padding: 1em;
   box-shadow: 0 10 100 1 rgba(0,0,0,0.4);
 }
 
@@ -107,6 +108,13 @@
   font-family: 'Ubuntu', sans-serif;
 }
 
+.comment-options{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
+
 .comment .metadata{
   font-weight: 100;
 }
@@ -115,6 +123,6 @@
 .add-comment{
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-end;
+  justify-content: center;
   height: 35px;
 }
